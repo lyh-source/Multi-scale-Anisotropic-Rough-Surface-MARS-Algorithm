@@ -1,4 +1,5 @@
 #pragma once
+#include<Eigen/core>
 class Correlation {
 public:
 	Correlation() {};
@@ -7,4 +8,5 @@ public:
 
 	int n, m;
 	double gamma;
+	Eigen::MatrixXd rhs;
 };

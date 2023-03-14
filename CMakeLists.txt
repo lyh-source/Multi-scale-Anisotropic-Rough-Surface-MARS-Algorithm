@@ -30,7 +30,10 @@ add_executable(${PROJECT_NAME}
 
 
 if (CMAKE_SYSTEM_NAME MATCHES "Windows")
-	
+	find_package(OpenCV REQUIRED)
+	SET(OpenCV_LIBRARIES ${OpenCV_LIBS})
+	INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
+	target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 #elseif(CMAKE_SYSTEM_NAME MATCHES "Emscripten")
 endif()
 

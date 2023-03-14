@@ -17,8 +17,8 @@ namespace mars_algorithm {
 		void mars_step_one();
 		void mars_step_two();
 		void mars_step_three();
-		void mars_step_four();
-		void mars_step_five(int i);
+		void mars_step_four(int idx);
+		void mars_step_five(int idx);
 		void solve();
 
 		//var

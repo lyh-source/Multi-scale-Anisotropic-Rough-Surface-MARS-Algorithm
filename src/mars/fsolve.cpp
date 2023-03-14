@@ -428,7 +428,7 @@ void fdjac1 ( void fcn ( int n, double x[], double f[] ),
 int fsolve ( void fcn ( int n, double x[], double fvec[] ), int n,
   double x[], double fvec[], double tol, double wa[], int lwa )
 
-//****************************************************************************80
+//****************************************************************************80 
 //
 //  Purpose:
 //
@@ -521,14 +521,17 @@ int fsolve ( void fcn ( int n, double x[], double fvec[] ), int n,
   {
     return info;
   }
+  
   if ( tol <= 0.0 )
   {
     return info;
   }
+  //std::cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n";
   if ( lwa < ( n * ( 3 * n + 13 ) ) / 2 )
   {
     return info;
   }
+ 
 //
 //  Call HYBRD.
 //
@@ -555,6 +558,7 @@ int fsolve ( void fcn ( int n, double x[], double fvec[] ), int n,
   {
     info = 4;
   }
+  
   return info;
 }
 //****************************************************************************80
